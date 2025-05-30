@@ -1,5 +1,5 @@
-import '../src/scss/styles.scss'
+import './shared/styles/styles.scss'
+import {App} from "./app/app";
 
-
-document.querySelector<HTMLDivElement>('body')!.innerHTML = `<div id = "app"></div>`
+new App()
 

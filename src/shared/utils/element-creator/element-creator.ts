@@ -1,4 +1,4 @@
-interface ElementCreatorParams {
+export interface ElementCreatorParams {
     tag: string;
     classNames: string[];
     textContent: string;
