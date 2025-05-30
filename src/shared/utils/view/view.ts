@@ -1,14 +1,10 @@
 import {ElementCreator, type ElementCreatorParams} from "../element-creator";
 
-export interface ViewParams {
-    tag: string,
-    classNames: Array<string>,
-}
 
 export class View {
     private viewElementCreator: any;
 
-    constructor(params: ViewParams = {tag: 'section', classNames: []}) {
+    constructor(params: ElementCreatorParams = {tag: 'section', classNames: [], textContent: ''}) {
         this.viewElementCreator = this.createView(params);
     }
 
@@ -18,12 +14,13 @@ export class View {
     }
 
 
-    createView(params: ViewParams): ElementCreator {
+    createView(params: ElementCreatorParams): ElementCreator {
 
         const elementParams: ElementCreatorParams = {
             tag: params.tag,
             classNames: params.classNames,
-            textContent: '',
+            textContent: params.textContent,
+            callback: params.callback ?? params.callback,
         };
         this.viewElementCreator = new ElementCreator(elementParams);
 
