@@ -4,21 +4,20 @@ enum cssClassesEnum {
     CONTAINER = 'container',
 }
 
-const textContent: string = 'textContent'
 
 const paramsContainer: ElementCreatorParams = {
     tag: 'div',
-    textContent: textContent,
+    textContent: '',
     classNames: [cssClassesEnum.CONTAINER],
 }
 
 
-export const Container = (innerElement?: ElementCreator) => {
+export const Container = (innerElement?: ElementCreator): ElementCreator => {
+    const container = new ElementCreator(paramsContainer);
     if (innerElement) {
-        new ElementCreator(paramsContainer).addInnerElement(innerElement);
-    } else {
-        return new ElementCreator(paramsContainer);
+        container.addInnerElement(innerElement);
     }
+    return container;
 }
 
 
