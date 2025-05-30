@@ -1,6 +1,6 @@
 import {ElementCreator, type ElementCreatorParams} from "../element-creator";
 
-interface ViewParams {
+export interface ViewParams {
     tag: string,
     classNames: Array<string>,
 }

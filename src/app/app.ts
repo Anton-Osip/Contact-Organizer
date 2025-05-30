@@ -9,6 +9,6 @@ export class App {
     createView() {
         const header = new Header()
 
-        document.body.append(header.getHTMLElement())
+        document.body.append(header.getHtmlElement())
     }
 }

@@ -1,30 +1,20 @@
-import {ElementCreator, type ElementCreatorParams} from "../../shared/utils";
+import {View, type ViewParams} from "../../shared/utils";
 
 enum cssClassesEnum {
     HEADER = 'header',
     NAV = 'nav',
 }
 
-const textContent: string = 'textContent'
 
-export class Header {
-    private elementCreator;
+export class Header extends View {
 
     constructor() {
-        this.elementCreator = this.createView()
-    }
-
-    getHTMLElement(): HTMLElement {
-        return this.elementCreator.getElement()
-    }
-
-    createView() {
-        const params: ElementCreatorParams = {
+        const params: ViewParams = {
             tag: 'header',
             classNames: [cssClassesEnum.HEADER],
-            textContent: textContent,
         }
-
-        return new ElementCreator(params);
+        super(params)
     }
+
+
 }
