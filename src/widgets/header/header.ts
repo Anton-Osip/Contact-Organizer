@@ -2,6 +2,7 @@ import './header.scss'
 
 import {ElementCreator, type ElementCreatorParams, View} from "../../shared/utils";
 import {Container} from "../../shared/ui";
+import {Logo} from "../../shared/ui/logo";
 
 enum cssClassesEnum {
     HEADER = 'header',
@@ -21,6 +22,8 @@ export class Header extends View {
         this.configureView()
     }
 
+
+
     configureView() {
         const paramsHeaderContainer: ElementCreatorParams = {
             tag: 'div',
@@ -28,6 +31,7 @@ export class Header extends View {
             textContent: '',
         }
         const headerContainer: ElementCreator = new ElementCreator(paramsHeaderContainer)
+        headerContainer.addInnerElement(new Logo().getHtmlElement())
         this.viewElementCreator.addInnerElement(Container(headerContainer))
     }
 
