@@ -2,7 +2,7 @@ import {ElementCreator, type ElementCreatorParams} from "../element-creator";
 
 
 export class View {
-    private viewElementCreator: any;
+    viewElementCreator: any;
 
     constructor(params: ElementCreatorParams = {tag: 'section', classNames: [], textContent: ''}) {
         this.viewElementCreator = this.createView(params);

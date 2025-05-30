@@ -1,11 +1,11 @@
+import './header.scss'
+
 import {type ElementCreatorParams, View} from "../../shared/utils";
+import {Container} from "../../shared/ui";
 
 enum cssClassesEnum {
     HEADER = 'header',
-    NAV = 'nav',
 }
-
-const textContent: string = 'textContent'
 
 export class Header extends View {
 
@@ -13,10 +13,15 @@ export class Header extends View {
         const params: ElementCreatorParams = {
             tag: 'header',
             classNames: [cssClassesEnum.HEADER],
-            textContent: textContent,
+            textContent: '',
         }
         super(params);
+
+        this.configureView()
     }
 
+    configureView() {
+        this.viewElementCreator.addInnerElement(Container())
+    }
 
 }

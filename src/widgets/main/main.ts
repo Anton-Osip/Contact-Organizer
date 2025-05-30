@@ -1,3 +1,5 @@
+import './main.scss'
+
 import {type ElementCreatorParams, View} from "../../shared/utils";
 
 enum cssClassesEnum {
