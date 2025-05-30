@@ -1,4 +1,4 @@
-import {Header} from "../widgets";
+import {Header, Main} from "../widgets";
 
 
 export class App {
@@ -8,7 +8,8 @@ export class App {
 
     createView() {
         const header = new Header()
+        const main = new Main()
 
-        document.body.append(header.getHtmlElement())
+        document.body.append(header.getHtmlElement(), main.getHtmlElement())
     }
 }
