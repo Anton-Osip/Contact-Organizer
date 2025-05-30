@@ -1,6 +1,16 @@
 .main {
+  overflow: auto;
   width: 100%;
   height: 100%;
   min-height: calc(100lvh - 70px);
   background: var(--bg-color);
+
+
+  & .container {
+    height: 100%;
+  }
+
+  &__container {
+    height: 100%;
+  }
 }

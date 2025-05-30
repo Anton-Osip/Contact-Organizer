@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
   background: var(--white-color);
 
@@ -14,19 +15,30 @@
     align-items: center;
     gap: 16px;
 
-    .buttons__add {
-      padding-right: 38px;
-      position: relative;
-    }
 
-    .buttons__add:after {
-      content: '+';
-      font-size: 20px;
-      position: absolute;
-      color: var(--white-color);
-      top: 12px;
-      right: 10px;
-    }
+  }
+
+  .buttons__add {
+    padding-right: 38px;
+    position: relative;
+  }
+
+  .buttons__add:after {
+    content: '+';
+    font-size: 20px;
+    position: absolute;
+    color: var(--white-color);
+    top: 12px;
+    right: 10px;
   }
 }
 
+
+@media (max-width: 624px) {
+  .header .buttons__add {
+    position: absolute;
+    bottom: -62px;
+    left: 12px;
+    width: calc(100% - 24px);
+  }
+}

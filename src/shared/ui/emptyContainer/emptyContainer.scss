@@ -1,0 +1,18 @@
+.empty__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100lvh - 70px);
+}
+
+.empty__text {
+  color: rgb(0, 0, 0);
+  font-family: var(--regular-font), sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0;
+  text-align: left;
+  opacity: 0.3;
+}
+
