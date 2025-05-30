@@ -36,6 +36,7 @@ export class ElementCreator {
     }
 
     setCssClasses(cssClasses: string[] = []): void {
+        console.log(cssClasses)
         cssClasses.forEach((cssClass) => this.element.classList.add(cssClass));
     }
 

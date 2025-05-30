@@ -1,11 +1,32 @@
 .header {
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05);
   background: var(--white-color);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    justify-content: space-between;
+  }
+
+  & .buttons__container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .buttons__add {
+      padding-right: 38px;
+      position: relative;
+    }
+
+    .buttons__add:after {
+      content: '+';
+      font-size: 20px;
+      position: absolute;
+      color: var(--white-color);
+      top: 12px;
+      right: 10px;
+    }
+  }
 }
 
-.header__container {
-  display: flex;
-  align-items: center;
-  padding: 16px 0;
-  justify-content: space-between;
-}

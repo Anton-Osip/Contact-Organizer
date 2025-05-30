@@ -1,0 +1,37 @@
+.button {
+  color: var(--white-color);
+  font-family: var(--bold-font), sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 6px;
+  transition: 0.3s ease-in-out;
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  &:focus-visible {
+    outline: #000 solid 2px;
+  }
+
+  &--primary {
+    background: var(--primery-color);
+
+    &:hover {
+      background: var(--primery-hover-color)
+    }
+  }
+
+  &--secondary {
+    background: var(--secondary-color);
+
+    &:hover {
+      background: var(--secondary-hover-color)
+    }
+  }
+}
+
