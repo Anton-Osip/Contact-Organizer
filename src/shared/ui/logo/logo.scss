@@ -1,0 +1,18 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+}
+
+.logo__image {
+}
+
+.logo__text {
+  color: var(--primery-color);
+  font-family: var(--bold-font), sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0;
+}
